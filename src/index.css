@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-font-smoothing: antialiased; }
+  body { @apply bg-concreto-50 text-concreto-900 font-sans text-[15px] leading-relaxed; }
+  h1, h2, h3 { @apply font-display text-concreto-900; letter-spacing: -0.01em; }
+  :focus-visible { @apply outline-none ring-2 ring-petroleo-500 ring-offset-2 ring-offset-concreto-50; }
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+}
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-pequeno px-4 h-10 text-sm font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-primario { @apply btn bg-petroleo-700 text-white hover:bg-petroleo-800; }
+  .btn-secundario { @apply btn bg-white text-concreto-800 border border-concreto-200 hover:bg-concreto-100; }
+  .btn-fantasma { @apply btn text-concreto-700 hover:bg-concreto-100; }
+  .btn-perigo { @apply btn bg-white text-quente border border-concreto-200 hover:bg-red-50; }
+  .campo { @apply w-full h-10 rounded-pequeno border border-concreto-200 bg-white px-3 text-sm placeholder:text-concreto-400 focus:border-petroleo-500 focus:outline-none focus:ring-2 focus:ring-petroleo-100; }
+  textarea.campo { @apply h-auto py-2 leading-relaxed; }
+  .rotulo { @apply block text-sm font-medium text-concreto-700 mb-1.5; }
+  .ajuda { @apply text-xs text-concreto-500 mt-1; }
+  .painel { @apply bg-white border border-concreto-200 rounded-medio; }
+}

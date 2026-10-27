@@ -1,0 +1,20 @@
+project_id = "leadflow"
+
+# Webhooks externos (Meta, Asaas, sites) não enviam o JWT do Supabase
+[functions.whatsapp-webhook]
+verify_jwt = false
+
+[functions.meta-leads-webhook]
+verify_jwt = false
+
+[functions.lead-entrada]
+verify_jwt = false
+
+[functions.assinatura]
+verify_jwt = false
+
+[functions.meta-sincronizar]
+verify_jwt = false
+
+[functions.rotinas]
+verify_jwt = false
